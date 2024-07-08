@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import kotlinx.coroutines.launch
 import lolstrategy.data.GoogleUser
 import lolstrategy.domain.repository.GoogleAuthRepository
+import lolstrategy.getPlatform
 import org.koin.compose.koinInject
 
 interface GoogleButtonUiContainerScope {
@@ -28,6 +29,7 @@ fun GoogleButtonUiContainer(
             override fun onClick() {
                 coroutineScope.launch {
                     val googleUser = googleAuthUiProvider.signIn()
+
                     onGoogleSignInResult(googleUser)
                 }
             }

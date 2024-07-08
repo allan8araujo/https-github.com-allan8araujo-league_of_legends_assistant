@@ -1,9 +1,7 @@
 package lolstrategy
 
-actual fun getPlatform(): Platform {
-    TODO("Not yet implemented")
-}
+actual fun getPlatform(): Platform = JVMPlatform()
 
 class JVMPlatform : Platform {
-    override val name: String = "Java ${System.getProperty("java.version")}"
+    override val name: String = "Jvm version"
 }

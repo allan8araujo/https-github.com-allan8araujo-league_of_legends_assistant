@@ -21,6 +21,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import lolstrategy.data.GoogleUser
 import lolstrategy.domain.repository.GoogleAuthRepository
+import lolstrategy.getPlatform
 import lolstrategy.ui.common.GoogleButtonUiContainer
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
@@ -77,8 +78,9 @@ fun SignInScreen(
         )
         Text(text = "You've been missed.")
 
-        if (signedInUser.value == null) {
-
+        if (getPlatform().name == "Jvm version" || signedInUser.value != null)
+            goToHome()
+        else {
             GoogleButtonUiContainer(onGoogleSignInResult = { googleUser ->
                 coroutineScope.launch {
                     setSignedInUser(googleUser)
@@ -96,19 +98,6 @@ fun SignInScreen(
                     Text("SignIn with Google")
                 }
             }
-        } else {
-            goToHome()
-//            Text("User Name: ${signedInUser.value!!.displayName}")
-//            Button(
-//                onClick = {
-//                    coroutineScope.launch {
-//                        googleAuthRepository.signOut()
-//                        setSignedInUser(null)
-//                    }
-//                }
-//            ) {
-//                Text("Sign Out")
-//            }
         }
     }
 }
