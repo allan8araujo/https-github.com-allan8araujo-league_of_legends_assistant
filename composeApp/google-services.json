@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "99963895611",
+    "project_id": "lolstrategy",
+    "storage_bucket": "lolstrategy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99963895611:android:64164ecf53abcb73c6c11e",
+        "android_client_info": {
+          "package_name": "org.limao6.lolstrategy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99963895611-5unjednqqahb26lvk2m5oh8tsjranm7a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.limao6.lolstrategy",
+            "certificate_hash": "129e173c2fb092e3d126b60237b3ac481793b776"
+          }
+        },
+        {
+          "client_id": "99963895611-g8e3r0d010cebee2h77h7mbjmkc3e725.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw4gmYWdh5g3rlYdaRr9TJWVBdwk84lHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99963895611-g8e3r0d010cebee2h77h7mbjmkc3e725.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
